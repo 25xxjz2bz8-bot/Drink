@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boost Juice — Cultural Immersion Pack 2025–26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f5f3ef;color:#1a1a1a;min-height:100vh}
+.page{max-width:960px;margin:0 auto;padding:2rem 1.5rem 4rem}
+
+/* COVER */
+.cover{background:#0d0d0d;border-radius:16px;padding:3.5rem 3rem 3rem;margin-bottom:2rem;position:relative;overflow:hidden}
+.cover-stripe{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#7AB648 0%,#4A90D9 33%,#C07010 66%,#6B3FA0 100%)}
+.cover-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.cover-title{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#fff;line-height:1.12;margin-bottom:.5rem}
+.cover-title em{font-style:italic;color:rgba(255,255,255,.5)}
+.cover-meta{font-size:13px;color:rgba(255,255,255,.38);margin-top:1.5rem}
+.cover-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:1.5rem}
+.cpill{font-size:11px;padding:4px 14px;border-radius:100px;font-weight:500;border:.5px solid}
+.cp-sp{background:rgba(122,182,72,.15);color:#A8D87A;border-color:rgba(122,182,72,.3)}
+.cp-su{background:rgba(74,144,217,.15);color:#7ABFFF;border-color:rgba(74,144,217,.3)}
+.cp-au{background:rgba(192,112,16,.15);color:#F4B84A;border-color:rgba(192,112,16,.3)}
+.cp-wi{background:rgba(107,63,160,.15);color:#C4A0F0;border-color:rgba(107,63,160,.3)}
+.cp-fs{background:rgba(232,74,122,.15);color:#F4A0C0;border-color:rgba(232,74,122,.3)}
+
+/* TOP NAV */
+.top-nav{display:flex;gap:4px;margin-bottom:1.5rem;background:#fff;padding:4px;border-radius:14px;border:.5px solid #e0ddd8}
+.tnav-btn{flex:1;padding:10px 6px;border:none;background:transparent;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;color:#888;display:flex;align-items:center;justify-content:center;gap:5px}
+.tnav-btn:hover{background:#f5f3ef;color:#333}
+.tnav-btn.tnav-sp{background:#7AB648;color:#fff}
+.tnav-btn.tnav-su{background:#1E6FC5;color:#fff}
+.tnav-btn.tnav-au{background:#C07010;color:#fff}
+.tnav-btn.tnav-wi{background:#6B3FA0;color:#fff}
+.tnav-btn.tnav-fs{background:#1a1a1a;color:#fff}
+
+/* SECTIONS */
+.section{display:none}.section.active{display:block}
+
+/* SEASON HEADER */
+.sh{padding:2rem 2rem 1.75rem;border-radius:14px;margin-bottom:1.25rem;border:.5px solid}
+.sh-sp{background:#F0F9E8;border-color:#C5E89A}
+.sh-su{background:#E6F1FB;border-color:#B0D4F4}
+.sh-au{background:#FDF3E2;border-color:#F5D59A}
+.sh-wi{background:#EDE5FA;border-color:#CDB8EE}
+.sh-fs{background:#1a1a1a;border-color:#333}
+.s-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;margin-bottom:.35rem}
+.s-title-sp{color:#2A6210}.s-title-su{color:#0C447C}.s-title-au{color:#7A4408}.s-title-wi{color:#3E1F6E}.s-title-fs{color:#fff}
+.s-tag{font-size:13px;font-style:italic;margin-bottom:1.25rem}
+.s-tag-sp{color:#5A9A28}.s-tag-su{color:#2A6AAE}.s-tag-au{color:#A06018}.s-tag-wi{color:#6030A0}.s-tag-fs{color:rgba(255,255,255,.55)}
+.mood-chips{display:flex;flex-wrap:wrap;gap:6px}
+.mc{font-size:11px;padding:4px 12px;border-radius:100px;font-weight:500;border:.5px solid}
+.mc-sp{background:#D8F0B8;color:#2A6210;border-color:#A8D870}
+.mc-su{background:#B8D8F8;color:#0A3C74;border-color:#78B8F0}
+.mc-au{background:#F8DCA8;color:#7A4408;border-color:#E0A850}
+.mc-wi{background:#DDD0F8;color:#3A1870;border-color:#A888E0}
+.mc-fs{background:rgba(232,74,122,.15);color:#F4A0C0;border-color:rgba(232,74,122,.3)}
+
+/* GEN TOGGLE */
+.gen-toggle{display:flex;align-items:center;gap:0;background:#f0ede8;border-radius:100px;padding:3px;width:fit-content;margin-bottom:1.25rem;border:.5px solid #e0ddd8}
+.gen-btn{padding:7px 20px;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;background:transparent;color:#888}
+.gen-btn.active-genz{background:#E84A7A;color:#fff}
+.gen-btn.active-millen{background:#1E6FC5;color:#fff}
+.gen-label{font-size:11px;color:#999;letter-spacing:1.5px;text-transform:uppercase;margin-right:10px;white-space:nowrap}
+
+/* GEN CONTENT PANELS */
+.gen-panel{display:none}.gen-panel.active{display:block}
+
+/* STAT ROW */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.25rem}
+.stat-card{background:#fff;border-radius:10px;padding:.875rem;text-align:center;border:.5px solid #e8e5e0}
+.stat-n{font-size:22px;font-weight:500;color:#1a1a1a;display:block}
+.stat-l{font-size:11px;color:#888;margin-top:2px;line-height:1.4}
+
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
+
+/* CARDS */
+.card{background:#fff;border:.5px solid #e8e5e0;border-radius:14px;padding:1.25rem}
+.card-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#aaa;margin-bottom:.75rem;font-weight:500}
+
+/* PALETTE */
+.pal-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.875rem}
+.sw{width:30px;height:30px;border-radius:50%;border:.5px solid #e0ddd8;flex-shrink:0}
+.sw-item{text-align:center}
+.sw-lbl{font-size:10px;color:#999;margin-top:3px}
+
+/* TRENDING LIST */
+.tlist{list-style:none}
+.titem{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:.5px solid #f0ede8;font-size:13px;line-height:1.5}
+.titem:last-child{border-bottom:none}
+.tnum{font-size:10px;font-weight:500;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.tn-sp{background:#C5E89A;color:#2A6210}.tn-su{background:#90CCF8;color:#083060}
+.tn-au{background:#F8D090;color:#7A4408}.tn-wi{background:#C8B0F0;color:#3A1870}
+.tn-fs{background:#E84A7A;color:#fff}
+.t-name{font-weight:500;color:#1a1a1a}
+.t-desc{color:#888;font-size:12px;margin-top:2px}
+
+/* HASHTAGS */
+.htags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.htag{font-size:11px;padding:4px 10px;border-radius:8px;background:#f5f3ef;color:#888;border:.5px solid #e0ddd8}
+
+/* CREATOR CARDS */
+.creator{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:.5px solid #f0ede8}
+.creator:last-child{border-bottom:none}
+.av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
+.av-sp{background:#C5E89A;color:#2A6210}.av-su{background:#90CCF8;color:#083060}
+.av-au{background:#F8D090;color:#7A4408}.av-wi{background:#C8B0F0;color:#3A1870}
+.av-genz{background:#F4C0D8;color:#9A1848}.av-millen{background:#B0D0F8;color:#083060}
+.c-name{font-size:13px;font-weight:500;color:#1a1a1a}
+.c-desc{font-size:12px;color:#888}
+
+/* INSIGHT BOX */
+.insight{border-radius:12px;padding:1rem 1.25rem;margin-top:1rem;border-left:3px solid}
+.ins-sp{background:#EFF8E5;border-color:#7AB648}.ins-su{background:#E2EFF8;border-color:#2A7ACC}
+.ins-au{background:#FAF0E0;border-color:#D48A20}.ins-wi{background:#EDE5FA;border-color:#7A48CC}
+.ins-fs{background:#1a1a1a;border-color:#E84A7A}
+.ins-label{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.4rem}
+.ins-sp .ins-label{color:#3A7A10}.ins-su .ins-label{color:#0A4A8C}
+.ins-au .ins-label{color:#7A4808}.ins-wi .ins-label{color:#4A1888}
+.ins-fs .ins-label{color:#E84A7A}
+.ins-text{font-size:13px;line-height:1.7;color:#2a2a2a}
+.ins-fs .ins-text{color:rgba(255,255,255,.8)}
+
+/* DIVIDER */
+.div{height:.5px;background:#f0ede8;margin:1.25rem 0}
+
+/* GEN COMPARISON */
+.gen-compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.gen-col{border-radius:12px;padding:1.25rem;border:.5px solid}
+.genz-col{background:#FFF0F5;border-color:#F4B4CC}
+.millen-col{background:#EFF6FF;border-color:#90CCF8}
+.gen-col-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem}
+.gen-badge{font-size:11px;padding:4px 12px;border-radius:100px;font-weight:500}
+.genz-badge{background:#E84A7A;color:#fff}
+.millen-badge{background:#1E6FC5;color:#fff}
+.gen-col-title{font-weight:500;font-size:14px}
+
+/* PRIORITY BAR */
+.pbar-item{margin-bottom:10px}
+.pbar-label{font-size:12px;color:#444;margin-bottom:4px;display:flex;justify-content:space-between}
+.pbar-track{background:#f0ede8;border-radius:100px;height:6px;overflow:hidden}
+.pbar-fill{height:100%;border-radius:100px;transition:width .6s ease}
+.pbar-sp{background:#7AB648}.pbar-su{background:#1E6FC5}
+.pbar-au{background:#C07010}.pbar-wi{background:#6B3FA0}
+.pbar-genz{background:#E84A7A}.pbar-millen{background:#1E6FC5}
+
+/* FUTURE SIGNALS */
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.signal-card{background:#fff;border:.5px solid #2a2a2a;border-radius:14px;padding:1.25rem;position:relative;overflow:hidden}
+.signal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.sig-red::before{background:#E84A7A}
+.sig-amber::before{background:#C07010}
+.sig-green::before{background:#7AB648}
+.sig-blue::before{background:#1E6FC5}
+.sig-purple::before{background:#6B3FA0}
+.signal-tier{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:.5rem}
+.tier-red{color:#E84A7A}.tier-amber{color:#C07010}.tier-green{color:#7AB648}
+.tier-blue{color:#1E6FC5}.tier-purple{color:#6B3FA0}
+.signal-name{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:.4rem}
+.signal-desc{font-size:12px;color:#666;line-height:1.6;margin-bottom:.875rem}
+.signal-meta{display:flex;flex-wrap:wrap;gap:6px}
+.signal-tag{font-size:11px;padding:3px 9px;border-radius:6px;background:#f5f3ef;color:#555;border:.5px solid #e0ddd8}
+.signal-stat{font-size:11px;padding:3px 9px;border-radius:6px;font-weight:500}
+.ss-red{background:#FBEAF0;color:#C81850;border:.5px solid #F4B4CC}
+.ss-amber{background:#FDF3E2;color:#7A4408;border:.5px solid #F5D59A}
+.ss-green{background:#EFF8E5;color:#2A6210;border:.5px solid #C5E89A}
+.ss-blue{background:#E6F1FB;color:#083060;border:.5px solid #90CCF8}
+.ss-purple{background:#EDE5FA;color:#3A1870;border:.5px solid #C8B0F0}
+
+/* RADAR LEGEND */
+.radar-legend{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;padding:1rem 1.25rem;background:#fff;border-radius:12px;border:.5px solid #e0ddd8}
+.rl-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#666}
+.rl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* NPD TIMELINE */
+.timeline{position:relative;padding-left:2rem;margin-bottom:1rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:1px;background:#e0ddd8}
+.tl-item{position:relative;margin-bottom:1.5rem}
+.tl-dot{width:12px;height:12px;border-radius:50%;position:absolute;left:-1.625rem;top:3px;border:2px solid #fff}
+.tl-dot-now{background:#E84A7A}.tl-dot-near{background:#C07010}.tl-dot-horizon{background:#7AB648}
+.tl-date{font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:3px}
+.tl-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+.tl-desc{font-size:12px;color:#888;line-height:1.6}
+
+/* CROSS-TRENDS */
+.cross-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cross-card{background:#fff;border:.5px solid #e8e5e0;border-radius:12px;padding:1rem}
+.cross-title{font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.cross-desc{font-size:12px;color:#888;line-height:1.65}
+
+@media(max-width:640px){
+  .g2,.g3,.gen-compare,.signal-grid,.cross-grid{grid-template-columns:1fr}
+  .stat-row{grid-template-columns:1fr 1fr}
+  .cover-title{font-size:28px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-stripe"></div>
+  <p class="cover-eyebrow">Boost Juice · NPD Cultural Intelligence · 2025–26</p>
+  <h1 class="cover-title">Cultural Immersion<br><em>Pack</em></h1>
+  <p class="cover-meta">Seasonal trends · Gen Z & Millennial lens · Future signals radar · TikTok zeitgeist</p>
+  <div class="cover-pills">
+    <span class="cpill cp-sp">🌸 Spring</span>
+    <span class="cpill cp-su">☀️ Summer</span>
+    <span class="cpill cp-au">🍂 Autumn</span>
+    <span class="cpill cp-wi">❄️ Winter</span>
+    <span class="cpill cp-fs">📡 Future Signals</span>
+  </div>
+</div>
+
+<!-- TOP NAV -->
+<div class="top-nav">
+  <button class="tnav-btn tnav-sp" onclick="showSection('spring')">🌸 Spring</button>
+  <button class="tnav-btn" onclick="showSection('summer')">☀️ Summer</button>
+  <button class="tnav-btn" onclick="showSection('autumn')">🍂 Autumn</button>
+  <button class="tnav-btn" onclick="showSection('winter')">❄️ Winter</button>
+  <button class="tnav-btn" onclick="showSection('future')">📡 Future Signals</button>
+</div>
+
+<!-- ============ SPRING ============ -->
+<div id="sec-spring" class="section active">
+  <div class="sh sh-sp">
+    <div class="s-title s-title-sp">Spring</div>
+    <div class="s-tag s-tag-sp">"New rituals, clean energy, bloom into colour"</div>
+    <div class="mood-chips">
+      <span class="mc mc-sp">Renewal</span><span class="mc mc-sp">Clean energy</span><span class="mc mc-sp">Bloom & glow</span>
+      <span class="mc mc-sp">Soft optimism</span><span class="mc mc-sp">Ritual mindfulness</span><span class="mc mc-sp">Quiet luxury</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card"><span class="stat-n">+10.3%</span><div class="stat-l">Matcha market CAGR 2025</div></div>
+    <div class="stat-card"><span class="stat-n">$4.24B</span><div class="stat-l">Global matcha market value</div></div>
+    <div class="stat-card"><span class="stat-n">89</span><div class="stat-l">New matcha product launches 2024</div></div>
+  </div>
+
+  <!-- GEN TOGGLE -->
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+    <span class="gen-label">View by:</span>
+    <div class="gen-toggle">
+      <button class="gen-btn active-genz" onclick="switchGen('spring','genz',this)">Gen Z</button>
+      <button class="gen-btn" onclick="switchGen('spring','millen',this)">Millennial</button>
+    </div>
+  </div>
+
+  <!-- GEN Z PANEL: SPRING -->
+  <div id="spring-genz" class="gen-panel active">
+    <div class="gen-compare">
+      <div class="gen-col genz-col">
+        <div class="gen-col-header"><span class="gen-badge genz-badge">Gen Z</span><span class="gen-col-title">Born 1997–2012</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Ceremonial matcha as personality</div><div class="t-desc">Matcha is a self-expression object, not just a drink. "Clean girl" status symbol. Filmed rituals = content.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Butterfly pea colour-change drinks</div><div class="t-desc">pH-reactive magic. Shareability is the point. Often lemon or lychee based. Huge reveal-video format.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Strawberry matcha layers</div><div class="t-desc">Pink-meets-green visual. Fresh purée over matcha. "Aesthetics first" — layering technique tutorials viral.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Visual shareability</span><span>94%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:94%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Wellness identity</span><span>88%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:88%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Low-sugar / clean label</span><span>82%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:82%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Peer discovery (TikTok)</span><span>78%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:78%"></div></div></div>
+      </div>
+      <div class="gen-col genz-col">
+        <div class="card-label">Content & creator style</div>
+        <div class="creator"><div class="av av-genz">WR</div><div><div class="c-name">GRWM morning ritual creators</div><div class="c-desc">Whisk + sip as meditative moment — "breathe and whisk your stress away"</div></div></div>
+        <div class="creator"><div class="av av-genz">CG</div><div><div class="c-name">Clean girl aesthetic accounts</div><div class="c-desc">Matcha + skincare pairing; "beauty from within" — Dua Lipa, Zendaya, Jennie co-signs</div></div></div>
+        <div class="creator"><div class="av av-genz">UC</div><div><div class="c-name">DIY home baristas</div><div class="c-desc">Ceremonial vs culinary grade taste tests; recipe tutorials with ingredient transparency</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#matchatok</span><span class="htag">#cleangirl</span><span class="htag">#slowmorning</span>
+          <span class="htag">#icedmatcha</span><span class="htag">#matchamorning</span><span class="htag">#homecafe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MILLENNIAL PANEL: SPRING -->
+  <div id="spring-millen" class="gen-panel">
+    <div class="gen-compare">
+      <div class="gen-col millen-col">
+        <div class="gen-col-header"><span class="gen-badge millen-badge">Millennial</span><span class="gen-col-title">Born 1981–1996</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Matcha as functional upgrade</div><div class="t-desc">Replacing coffee for sustained energy without crash. L-theanine + caffeine health framing dominant.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Sparkling matcha & hybrid formats</div><div class="t-desc">Fizzy matcha soda, protein matcha. Embedding into existing routines — morning ritual replacement.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Floral botanical lattes</div><div class="t-desc">Lavender, rose, elderflower. Premium café experience replicated at home. Quality ingredients over novelty.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Functional health benefits</span><span>91%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:91%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Sustainability / clean label</span><span>85%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:85%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Premium experience</span><span>79%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:79%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Routine integration</span><span>74%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:74%"></div></div></div>
+      </div>
+      <div class="gen-col millen-col">
+        <div class="card-label">Content & creator style</div>
+        <div class="creator"><div class="av av-millen">WB</div><div><div class="c-name">Wellness bloggers & Substack writers</div><div class="c-desc">Matcha as part of a structured morning routine; productivity framing; "calm focus"</div></div></div>
+        <div class="creator"><div class="av av-millen">PB</div><div><div class="c-name">Parent + wellness crossover accounts</div><div class="c-desc">Adapting matcha for family mornings; lower sugar; kid-adjacent lifestyle content</div></div></div>
+        <div class="creator"><div class="av av-millen">CA</div><div><div class="c-name">Café culture & origin story accounts</div><div class="c-desc">Ceremonial grade sourcing; Japan origin stories; sustainability and traceability emphasis</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#matchalatte</span><span class="htag">#morningritual</span><span class="htag">#functionalwellness</span>
+          <span class="htag">#matcharecipe</span><span class="htag">#botanicaldrinks</span><span class="htag">#springdrinks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-label">Trending Drink Products</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-sp">1</span><div><div class="t-name">Matcha latte (iced, layered)</div><div class="t-desc">Ceremonial grade; vanilla, strawberry & floral variants. Clear cups show colour layering.</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">2</span><div><div class="t-name">Sakura / cherry blossom drinks</div><div class="t-desc">Floral, light pink. Red Bull Spring Cherry Sakura edition went viral on TikTok.</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">3</span><div><div class="t-name">Strawberry matcha</div><div class="t-desc">Pink-meets-green aesthetic; fresh strawberry purée over matcha base. Highly shareable.</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">4</span><div><div class="t-name">Sparkling matcha</div><div class="t-desc">Fizzy matcha soda; growing in Asian café chains, spreading to Western markets.</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">5</span><div><div class="t-name">Butterfly pea colour-change drinks</div><div class="t-desc">pH-reactive blue-to-pink magic. Huge shareability; often lemon or lychee based.</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Visual Palette</div>
+      <div class="pal-row">
+        <div class="sw-item"><div class="sw" style="background:#7AB648"></div><div class="sw-lbl">Matcha</div></div>
+        <div class="sw-item"><div class="sw" style="background:#F8B4C8"></div><div class="sw-lbl">Sakura</div></div>
+        <div class="sw-item"><div class="sw" style="background:#EDF7E2"></div><div class="sw-lbl">Mist</div></div>
+        <div class="sw-item"><div class="sw" style="background:#D8B4F8"></div><div class="sw-lbl">Lavender</div></div>
+        <div class="sw-item"><div class="sw" style="background:#FDDDE0"></div><div class="sw-lbl">Blush</div></div>
+        <div class="sw-item"><div class="sw" style="background:#F0EDE4"></div><div class="sw-lbl">Linen</div></div>
+      </div>
+      <div class="card-label" style="margin-top:.875rem">Visual Themes</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-desc">GRWM morning ritual — whisk + sip as meditative moment; green is the new neutral</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-desc">Slow pour, foam cloud, condensation close-ups in natural window light</div></div></li>
+        <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-desc">Cherry blossom outdoor café, linen textures, ceramic vessels</div></div></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="insight ins-sp">
+    <div class="ins-label">Key cultural insight — Spring</div>
+    <div class="ins-text">Spring is the season of intentional beginning. On TikTok, drinks are no longer just refreshment — they're rituals of self-care and identity. The aesthetic-first, health-forward matcha wave has turned beverages into visual language: calm, clarity, and clean living in a glass. Celebrity co-signs (Jennie, Zendaya, Dua Lipa) have accelerated this into mainstream culture. Gen Z performs a way of living; Millennials embed it into their health routines. Both converge on transparency, quality, and intentionality — but through different entry points.</div>
+  </div>
+</div>
+
+<!-- ============ SUMMER ============ -->
+<div id="sec-summer" class="section">
+  <div class="sh sh-su">
+    <div class="s-title s-title-su">Summer</div>
+    <div class="s-tag s-tag-su">"Dopamine sipping, social fuel, vitamin sea"</div>
+    <div class="mood-chips">
+      <span class="mc mc-su">Joy & escape</span><span class="mc mc-su">Social currency</span><span class="mc mc-su">Dopamine colours</span>
+      <span class="mc mc-su">Hydration obsession</span><span class="mc mc-su">Adventurous</span><span class="mc mc-su">Maximalist fun</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card"><span class="stat-n">+70%</span><div class="stat-l">Coconut Lime Cooler YoY</div></div>
+    <div class="stat-card"><span class="stat-n">+48.4%</span><div class="stat-l">Cortisol Cocktail growth</div></div>
+    <div class="stat-card"><span class="stat-n">100</span><div class="stat-l">Peak search index for TikTok drinks May 2025</div></div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+    <span class="gen-label">View by:</span>
+    <div class="gen-toggle">
+      <button class="gen-btn active-genz" onclick="switchGen('summer','genz',this)">Gen Z</button>
+      <button class="gen-btn" onclick="switchGen('summer','millen',this)">Millennial</button>
+    </div>
+  </div>
+
+  <div id="summer-genz" class="gen-panel active">
+    <div class="gen-compare">
+      <div class="gen-col genz-col">
+        <div class="gen-col-header"><span class="gen-badge genz-badge">Gen Z</span><span class="gen-col-title">Born 1997–2012</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">"Beverage girlie" identity</div><div class="t-desc">5 drinks on desk as personality trait. Constant rotation. Colour-matched to outfit. Drinks as accessories.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Coconut Lime Cooler & mocktails</div><div class="t-desc">Non-alc dominant. DIY-friendly. 25% drink NA alternatives weekly. Appearance over alcohol content.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Dirty soda & flavour stacking</div><div class="t-desc">Layering syrups, creamers, sodas. Personalisation and co-creation. 75% customise drinks.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Appearance / shareability</span><span>96%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:96%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Flavour novelty</span><span>85%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:85%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Non-alcoholic preference</span><span>76%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:76%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Price / accessibility</span><span>72%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:72%"></div></div></div>
+      </div>
+      <div class="gen-col genz-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-genz">BG</div><div><div class="c-name">Beverage girlie creators</div><div class="c-desc">Daily drink rotations; Starbucks customisations; "which drink for which mood" content</div></div></div>
+        <div class="creator"><div class="av av-genz">DS</div><div><div class="c-name">Dirty soda experimenters</div><div class="c-desc">DIY flavour-stacking recipes; ingredient hauls; "rate my drink" formats</div></div></div>
+        <div class="creator"><div class="av av-genz">MK</div><div><div class="c-name">Global flavour explorers</div><div class="c-desc">Mango Yakult, tamarind, ube — authenticity in exotic flavour discovery</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#beveragegirlie</span><span class="htag">#dirtysoda</span><span class="htag">#mocktailrecipe</span>
+          <span class="htag">#TikTokMadeMeTryIt</span><span class="htag">#summerdrinks</span><span class="htag">#drinkrecipe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="summer-millen" class="gen-panel">
+    <div class="gen-compare">
+      <div class="gen-col millen-col">
+        <div class="gen-col-header"><span class="gen-badge millen-badge">Millennial</span><span class="gen-col-title">Born 1981–1996</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Functional wellness drinks</div><div class="t-desc">Cortisol cocktails, cloud coffee, electrolyte mocktails. 54% say beverages should contribute to health.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Premium RTDs & low-ABV options</div><div class="t-desc">Convenience without compromise. Canned cocktails, sparkling wines, rosé formats for social occasions.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Spicy / complex flavour profiles</div><div class="t-desc">Blood orange margarita, Spicy Sauvy B. Sophistication over sweetness. "Drinking less but better."</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Health & wellness</span><span>89%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:89%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Sustainability (packaging)</span><span>82%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:82%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Flavour complexity</span><span>78%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:78%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Social occasion fit</span><span>74%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:74%"></div></div></div>
+      </div>
+      <div class="gen-col millen-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-millen">JM</div><div><div class="c-name">Julianna McIntosh</div><div class="c-desc">ASMR cocktail creator; Spotify-integrated recipe content; photography-driven aesthetic</div></div></div>
+        <div class="creator"><div class="av av-millen">FW</div><div><div class="c-name">Functional wellness accounts</div><div class="c-desc">Electrolytes, adaptogens, cortisol hacks — health framing on indulgent drinks</div></div></div>
+        <div class="creator"><div class="av av-millen">HE</div><div><div class="c-name">Hosting & entertaining creators</div><div class="c-desc">Pitcher cocktails, summer entertaining guides, premium ingredient sourcing</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#cortisolcocktail</span><span class="htag">#cloudcoffee</span><span class="htag">#summercocktails</span>
+          <span class="htag">#mindfuldrinking</span><span class="htag">#lowABV</span><span class="htag">#wellnessdrinks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-label">Trending Drink Products</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-su">1</span><div><div class="t-name">Cloud Coffee (coconut water cold brew)</div><div class="t-desc">Espresso + coconut water = tropical + functional. 22,000+ posts, +30.9% YoY.</div></div></li>
+        <li class="titem"><span class="tnum tn-su">2</span><div><div class="t-name">Coconut Lime Cooler (mocktail)</div><div class="t-desc">Bright, refreshing, DIY-friendly. Dominates TikTok's NA community. +70% YoY.</div></div></li>
+        <li class="titem"><span class="tnum tn-su">3</span><div><div class="t-name">Cortisol Cocktail</div><div class="t-desc">Vitamin C + electrolytes + mineral juices. "Stress-management in a glass." +48.4% YoY.</div></div></li>
+        <li class="titem"><span class="tnum tn-su">4</span><div><div class="t-name">Blood Orange Spicy Margarita</div><div class="t-desc">Sunset colour, jalapeño heat. Bold, brave. Celebration content anchor.</div></div></li>
+        <li class="titem"><span class="tnum tn-su">5</span><div><div class="t-name">White Peach Sangria</div><div class="t-desc">Vibrant pitcher format. Shareable. +6.7% YoY across 277 restaurants.</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Visual Palette</div>
+      <div class="pal-row">
+        <div class="sw-item"><div class="sw" style="background:#F4C142"></div><div class="sw-lbl">Sunshine</div></div>
+        <div class="sw-item"><div class="sw" style="background:#4AACDC"></div><div class="sw-lbl">Aqua</div></div>
+        <div class="sw-item"><div class="sw" style="background:#F28B42"></div><div class="sw-lbl">Sunset</div></div>
+        <div class="sw-item"><div class="sw" style="background:#E84A7A"></div><div class="sw-lbl">Watermelon</div></div>
+        <div class="sw-item"><div class="sw" style="background:#A8E4D8"></div><div class="sw-lbl">Sea foam</div></div>
+        <div class="sw-item"><div class="sw" style="background:#FFF9C0"></div><div class="sw-lbl">Lemon ice</div></div>
+      </div>
+      <div class="card-label" style="margin-top:.875rem">Visual Themes</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-desc">"Beverage girlie" — drinks as accessories, colour-matched to outfits & backdrops</div></div></li>
+        <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-desc">Golden hour condensation shots; overhead poolside; high saturation</div></div></li>
+        <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-desc">Appearance cited over taste in purchase intent — visual-first always wins</div></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="insight ins-su">
+    <div class="ins-label">Key cultural insight — Summer</div>
+    <div class="ins-text">Summer drink culture is fundamentally performative and social. TikTok has accelerated beverage lifecycles to a sprint. How a drink looks often matters more than what's in it. Gen Z's "beverage girlie" identity treats drinks as self-expression objects and craves non-alcoholic dopamine hits. Millennials converge on the wellness-indulgence tension — functional benefits wrapped in maximalist, shareable presentation. Both generations are driving the mocktail premiumisation wave, but for different reasons: Gen Z for social aesthetics, Millennials for mindful health.</div>
+  </div>
+</div>
+
+<!-- ============ AUTUMN ============ -->
+<div id="sec-autumn" class="section">
+  <div class="sh sh-au">
+    <div class="s-title s-title-au">Autumn</div>
+    <div class="s-tag s-tag-au">"Ritual cocooning, warm nostalgia, permission to slow down"</div>
+    <div class="mood-chips">
+      <span class="mc mc-au">Cosy comfort</span><span class="mc mc-au">Nostalgia</span><span class="mc mc-au">Soft melancholy</span>
+      <span class="mc mc-au">Ritual return</span><span class="mc mc-au">Warmth-seeking</span><span class="mc mc-au">Community & gathering</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card"><span class="stat-n">+39%</span><div class="stat-l">Pumpkin + coffee YoY TikTok</div></div>
+    <div class="stat-card"><span class="stat-n">+304%</span><div class="stat-l">Cookie butter + coffee YoY</div></div>
+    <div class="stat-card"><span class="stat-n">+23%</span><div class="stat-l">Cold foam sales growth Q3 2024</div></div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+    <span class="gen-label">View by:</span>
+    <div class="gen-toggle">
+      <button class="gen-btn active-genz" onclick="switchGen('autumn','genz',this)">Gen Z</button>
+      <button class="gen-btn" onclick="switchGen('autumn','millen',this)">Millennial</button>
+    </div>
+  </div>
+
+  <div id="autumn-genz" class="gen-panel active">
+    <div class="gen-compare">
+      <div class="gen-col genz-col">
+        <div class="gen-col-header"><span class="gen-badge genz-badge">Gen Z</span><span class="gen-col-title">Born 1997–2012</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Limited drop FOMO culture</div><div class="t-desc">Alani Nu Pumpkin Cream sell-outs; restock alerts; "got it before it's gone" content. Scarcity = status.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Cookie butter & "unexpected" flavours</div><div class="t-desc">Moving beyond PSL. +304% YoY. Gen Z leads discovery of breakout autumn flavours.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Aesthetic-first "ber months" content</div><div class="t-desc">Transition montages: summer memories → PSL + sweater. Countdown to cosy season starts in July.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Limited edition / exclusivity</span><span>91%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:91%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Aesthetic & shareability</span><span>88%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:88%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Novelty flavour discovery</span><span>82%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:82%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Clean energy (functional)</span><span>72%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:72%"></div></div></div>
+      </div>
+      <div class="gen-col genz-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-genz">CA</div><div><div class="c-name">Cosy living accounts (@cosyautumnco)</div><div class="c-desc">Homemaker-adjacent; drink + décor + warm lighting GRWM; "cozytok" visual grammar</div></div></div>
+        <div class="creator"><div class="av av-genz">FL</div><div><div class="c-name">Fitness & lifestyle influencers</div><div class="c-desc">Alani Nu "Fall Energy Glow-Up" content; clean label + aesthetic appeal</div></div></div>
+        <div class="creator"><div class="av av-genz">BM</div><div><div class="c-name">Bookshelf / dark academia accounts</div><div class="c-desc">PSL + reading + candles = "bermonths" content. Aspirational slow living.</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#cozytok</span><span class="htag">#bermonths</span><span class="htag">#fallaesthetic</span>
+          <span class="htag">#PSLseason</span><span class="htag">#autumnvibes</span><span class="htag">#limiteddrop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="autumn-millen" class="gen-panel">
+    <div class="gen-compare">
+      <div class="gen-col millen-col">
+        <div class="gen-col-header"><span class="gen-badge millen-badge">Millennial</span><span class="gen-col-title">Born 1981–1996</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Sophisticated autumn flavours</div><div class="t-desc">Apple cider, rosemary, sage, smoked spice. Layering savouriness for complexity. Beyond-PSL positioning.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Gut-health autumn drinks</div><div class="t-desc">Honeycrisp apple kombucha, turmeric + apple cider drinks. Seasonal functional framing.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Theatrical cocktail experiences</div><div class="t-desc">Smoked cinnamon, brûléed citrus, toasted marshmallow garnishes. Hosting-oriented, premium.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Authentic ingredients / origin</span><span>88%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:88%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Flavour complexity</span><span>84%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:84%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Seasonal ritual / nostalgia</span><span>79%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:79%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Hosting / social occasion</span><span>71%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:71%"></div></div></div>
+      </div>
+      <div class="gen-col millen-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-millen">FM</div><div><div class="c-name">Food media creators</div><div class="c-desc">Origin story + real ingredient content; backlash against "generic pumpkin visuals"</div></div></div>
+        <div class="creator"><div class="av av-millen">CC</div><div><div class="c-name">Cosy curator accounts</div><div class="c-desc">"Cozy guide" not "influencer ad" — brand integration feels editorial, native to feed</div></div></div>
+        <div class="creator"><div class="av av-millen">HO</div><div><div class="c-name">Home entertaining accounts</div><div class="c-desc">Autumn cocktail party setups; spiced cider bars; theatrical garnish tutorials</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#autumnentertaining</span><span class="htag">#cozycocktails</span><span class="htag">#falldrinks</span>
+          <span class="htag">#applecider</span><span class="htag">#kombucha</span><span class="htag">#homebarista</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-label">Trending Drink Products</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-au">1</span><div><div class="t-name">Pumpkin spice cold brew + cold foam</div><div class="t-desc">Classic PSL reimagined cold. Pumpkin cream cold foam. Seasonal powerhouse (+39% YoY).</div></div></li>
+        <li class="titem"><span class="tnum tn-au">2</span><div><div class="t-name">Alani Nu Pumpkin Cream energy</div><div class="t-desc">Cult-status seasonal drop. Sells out within days. "PSL of energy drinks." +Clean wellness positioning.</div></div></li>
+        <li class="titem"><span class="tnum tn-au">3</span><div><div class="t-name">Cookie butter latte</div><div class="t-desc">Breakout star. +303.9% YoY. Warm, dessert-adjacent, biscoff-coded. Strong winter cross-over.</div></div></li>
+        <li class="titem"><span class="tnum tn-au">4</span><div><div class="t-name">Spiced apple & maple cocktails</div><div class="t-desc">Apple cider, rosemary, sage, smoked cinnamon. Mixologists layering in savoury herbs.</div></div></li>
+        <li class="titem"><span class="tnum tn-au">5</span><div><div class="t-name">Honeycrisp apple kombucha</div><div class="t-desc">Gut-health framing. GT's Living Foods seasonal release. "Gut-healthy apple cider" positioning.</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Visual Palette</div>
+      <div class="pal-row">
+        <div class="sw-item"><div class="sw" style="background:#C07010"></div><div class="sw-lbl">Burnt oak</div></div>
+        <div class="sw-item"><div class="sw" style="background:#E8A840"></div><div class="sw-lbl">Amber</div></div>
+        <div class="sw-item"><div class="sw" style="background:#8B4513"></div><div class="sw-lbl">Cinnamon</div></div>
+        <div class="sw-item"><div class="sw" style="background:#D4A076"></div><div class="sw-lbl">Latte</div></div>
+        <div class="sw-item"><div class="sw" style="background:#5C3A1E"></div><div class="sw-lbl">Dark roast</div></div>
+        <div class="sw-item"><div class="sw" style="background:#F5E6C8"></div><div class="sw-lbl">Parchment</div></div>
+      </div>
+      <div class="card-label" style="margin-top:.875rem">Visual Themes</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-au">→</span><div><div class="t-desc">Candlelight, woven textures, steam rising, pumpkin-shaped mugs — "cozytok" grammar</div></div></li>
+        <li class="titem"><span class="tnum tn-au">→</span><div><div class="t-desc">Theatrical drinks: smoked cinnamon, brûléed citrus — content magnets</div></div></li>
+        <li class="titem"><span class="tnum tn-au">→</span><div><div class="t-desc">Limited drop sell-out alerts; FOMO restock content</div></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="insight ins-au">
+    <div class="ins-label">Key cultural insight — Autumn</div>
+    <div class="ins-text">Autumn is no longer just a season — it's a permission structure. TikTok has codified "cozy season" as a collective ritual, but the two generations inhabit it differently. Gen Z chases the drop economy: limited releases, sell-outs, FOMO restock content. Millennials are leading the backlash against generic pumpkin clichés, demanding real ingredients and origin stories. The cookie butter surge (+304% YoY) signals Gen Z's appetite for unexpected breakout flavours. Brands that lead the calendar — launching in August or September — own the narrative before October competition peaks.</div>
+  </div>
+</div>
+
+<!-- ============ WINTER ============ -->
+<div id="sec-winter" class="section">
+  <div class="sh sh-wi">
+    <div class="s-title s-title-wi">Winter</div>
+    <div class="s-tag s-tag-wi">"Festive indulgence, mindful drinking, the art of the warm moment"</div>
+    <div class="mood-chips">
+      <span class="mc mc-wi">Festive magic</span><span class="mc mc-wi">Mindful indulgence</span><span class="mc mc-wi">Togetherness</span>
+      <span class="mc mc-wi">Theatrical experience</span><span class="mc mc-wi">Nostalgia & comfort</span><span class="mc mc-wi">Premiumisation</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card"><span class="stat-n">34.1M</span><div class="stat-l">Views: #frenchhotchocolate TikTok</div></div>
+    <div class="stat-card"><span class="stat-n">+11%</span><div class="stat-l">Rosé champagne sales growth early 2025</div></div>
+    <div class="stat-card"><span class="stat-n">40%</span><div class="stat-l">Gen Z use TikTok to find drink venues</div></div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+    <span class="gen-label">View by:</span>
+    <div class="gen-toggle">
+      <button class="gen-btn active-genz" onclick="switchGen('winter','genz',this)">Gen Z</button>
+      <button class="gen-btn" onclick="switchGen('winter','millen',this)">Millennial</button>
+    </div>
+  </div>
+
+  <div id="winter-genz" class="gen-panel active">
+    <div class="gen-compare">
+      <div class="gen-col genz-col">
+        <div class="gen-col-header"><span class="gen-badge genz-badge">Gen Z</span><span class="gen-col-title">Born 1997–2012</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Loaded hot chocolate / freakshakes</div><div class="t-desc">Originated in Australia (2.4M TikTok views). Brownies, popcorn, cake toppings. Maximum visual drama.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Hot chocolate bombs (reveal videos)</div><div class="t-desc">Dramatic melt-on-pour theatre. ASMR crossover. Self-gifting and gifting content. Festive shapes.</div></div></li>
+          <li class="titem"><span class="tnum tn-sp">→</span><div><div class="t-name">Pistachio latte</div><div class="t-desc">TikTok-driven hype driving café walk-in traffic in Australia. Photogenic green. Colour trend alignment.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Theatre / visual drama</span><span>93%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:93%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>ASMR / sensory content</span><span>86%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:86%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>NA / sober-curious</span><span>76%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:76%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Gifting & self-gifting</span><span>68%</span></div><div class="pbar-track"><div class="pbar-fill pbar-genz" style="width:68%"></div></div></div>
+      </div>
+      <div class="gen-col genz-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-genz">UC</div><div><div class="c-name">Australian café spotters</div><div class="c-desc">Loaded hot chocolate discovers; first-to-try pistachio latte regional launches</div></div></div>
+        <div class="creator"><div class="av av-genz">GZ</div><div><div class="c-name">Gen Z gifting creators</div><div class="c-desc">Hot cocoa mix-in-a-jar DIY; drink-adjacent gift guides; self-gifting normalisation</div></div></div>
+        <div class="creator"><div class="av av-genz">AS</div><div><div class="c-name">ASMR drink reveal creators</div><div class="c-desc">Bomb melt reveals; hot milk pour close-ups; whipped foam drama in studio light</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#hotchocolate</span><span class="htag">#cocoabomb</span><span class="htag">#pistachiolatte</span>
+          <span class="htag">#loadedhotchoc</span><span class="htag">#winterdrinks</span><span class="htag">#soberchristmas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="winter-millen" class="gen-panel">
+    <div class="gen-compare">
+      <div class="gen-col millen-col">
+        <div class="gen-col-header"><span class="gen-badge millen-badge">Millennial</span><span class="gen-col-title">Born 1981–1996</span></div>
+        <div class="card-label">Drink identity</div>
+        <ul class="tlist">
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">French hot chocolate (le chocolat chaud)</div><div class="t-desc">34.1M views. Thick, ultra-indulgent. Elevated European café experience. Premium, sophisticated.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Espresso martini (elevated at-home)</div><div class="t-desc">Top holiday drink in 11 US states. "Most significant festive shift in years." Premium liqueur sourcing.</div></div></li>
+          <li class="titem"><span class="tnum tn-su">→</span><div><div class="t-name">Mindful drinking premium mocktails</div><div class="t-desc">"Zebra striping" — alternating alc/NA. Sophisticated botanicals and bitters as alcohol alternatives.</div></div></li>
+        </ul>
+        <div class="div"></div>
+        <div class="card-label">Key motivations</div>
+        <div class="pbar-item"><div class="pbar-label"><span>Premium indulgence</span><span>87%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:87%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Mindful drinking</span><span>83%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:83%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Hosting / entertaining</span><span>78%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:78%"></div></div></div>
+        <div class="pbar-item"><div class="pbar-label"><span>Eco packaging</span><span>66%</span></div><div class="pbar-track"><div class="pbar-fill pbar-millen" style="width:66%"></div></div></div>
+      </div>
+      <div class="gen-col millen-col">
+        <div class="card-label">Content style</div>
+        <div class="creator"><div class="av av-millen">HC</div><div><div class="c-name">Holiday hosting creators</div><div class="c-desc">Hot chocolate bars, NYE cocktail prep, premium gifting with drink focus</div></div></div>
+        <div class="creator"><div class="av av-millen">SC</div><div><div class="c-name">Sober-curious & mindful drinkers</div><div class="c-desc">"Zebra striping" rituals; premium NA alternatives; "drinking better, not more"</div></div></div>
+        <div class="creator"><div class="av av-millen">GS</div><div><div class="c-name">Gourmet sourcing accounts</div><div class="c-desc">Premium chocolate sourcing for hot choc; single-origin coffee for espresso martinis</div></div></div>
+        <div class="div"></div>
+        <div class="card-label">Key hashtags</div>
+        <div class="htags">
+          <span class="htag">#frenchhotchocolate</span><span class="htag">#espressomartini</span><span class="htag">#mindfuldrinking</span>
+          <span class="htag">#christmasdrinks</span><span class="htag">#zebrastriping</span><span class="htag">#premiumNA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-label">Trending Drink Products</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-wi">1</span><div><div class="t-name">French hot chocolate (le chocolat chaud)</div><div class="t-desc">Thick, rich, ultra-indulgent. 34.1M TikTok views on #frenchhotchocolate.</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">2</span><div><div class="t-name">Pistachio latte</div><div class="t-desc">Middle Eastern-inspired, photogenic green. TikTok-driven hype in Australia. Both caffeinated & matcha versions.</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">3</span><div><div class="t-name">Espresso martini</div><div class="t-desc">Top holiday drink in 11 US states. "Most significant shift in festive culture." At-home elevation surging.</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">4</span><div><div class="t-name">Hot chocolate bombs</div><div class="t-desc">Dramatic melt-on-pour theatre. Festive shapes. Self-gifting. Highly shareable reveal video format.</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">5</span><div><div class="t-name">Loaded hot chocolate / freakshakes</div><div class="t-desc">Originated in Australia (2.4M TikTok views). Toppings: brownies, cake. Maximum visual drama.</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">Visual Palette</div>
+      <div class="pal-row">
+        <div class="sw-item"><div class="sw" style="background:#6B3FA0"></div><div class="sw-lbl">Midnight</div></div>
+        <div class="sw-item"><div class="sw" style="background:#C0392B"></div><div class="sw-lbl">Berry red</div></div>
+        <div class="sw-item"><div class="sw" style="background:#F5F0E8"></div><div class="sw-lbl">Snow cream</div></div>
+        <div class="sw-item"><div class="sw" style="background:#2C3E50"></div><div class="sw-lbl">Ink</div></div>
+        <div class="sw-item"><div class="sw" style="background:#D4AF37"></div><div class="sw-lbl">Gold</div></div>
+        <div class="sw-item"><div class="sw" style="background:#A8D8A8"></div><div class="sw-lbl">Pistachio</div></div>
+      </div>
+      <div class="card-label" style="margin-top:.875rem">Visual Themes</div>
+      <ul class="tlist">
+        <li class="titem"><span class="tnum tn-wi">→</span><div><div class="t-desc">Hot chocolate bar home setups — toppings stations for social content; interactive gifting</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">→</span><div><div class="t-desc">Bomb melt reveals: white mug, hot milk pour, swirling dissolution — ASMR crossover</div></div></li>
+        <li class="titem"><span class="tnum tn-wi">→</span><div><div class="t-desc">"Zebra striping" sustainability signals: eco packaging as visual identity marker</div></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="insight ins-wi">
+    <div class="ins-label">Key cultural insight — Winter</div>
+    <div class="ins-text">Winter is the season of theatre and permission. Gen Z seeks maximum visual drama — bombs that melt, drinks that do something — and discovery through TikTok's café-spotting format. Millennials navigate the festive-mindful tension: premium indulgence that doesn't compromise their year-long wellness identity. The sober-curious movement peaks in winter, creating space for sophisticated NA alternatives that feel celebratory, not compensatory. For Boost Juice, the Australia-originating "loaded hot chocolate" trend is a cultural home-ground advantage worth activating.</div>
+  </div>
+</div>
+
+<!-- ============ FUTURE SIGNALS ============ -->
+<div id="sec-future" class="section">
+  <div class="sh sh-fs">
+    <div class="s-title s-title-fs">📡 Future Signals Radar</div>
+    <div class="s-tag s-tag-fs">"Green shoots for NPD 9–12 months out — what's niche today, mainstream tomorrow"</div>
+    <div class="mood-chips">
+      <span class="mc mc-fs">Early adoption</span><span class="mc mc-fs">Innovation lead time</span><span class="mc mc-fs">Emerging signals</span>
+      <span class="mc mc-fs">NPD horizon</span><span class="mc mc-fs">Category disruption</span>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.25rem;border:.5px solid #e0ddd8">
+    <div style="font-size:11px;color:#888;margin-bottom:.875rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500">Signal Strength Key</div>
+    <div class="radar-legend">
+      <div class="rl-item"><div class="rl-dot" style="background:#E84A7A"></div>Hot — High confidence, 6–9 months to mainstream</div>
+      <div class="rl-item"><div class="rl-dot" style="background:#C07010"></div>Warming — Medium confidence, 9–12 months out</div>
+      <div class="rl-item"><div class="rl-dot" style="background:#7AB648"></div>Emerging — Early signal, 12–18 months horizon</div>
+      <div class="rl-item"><div class="rl-dot" style="background:#1E6FC5"></div>Watching — Low signal, strategic awareness only</div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:1rem;padding-left:.25rem">🔴 Hot Signals — Act now, launching in 9 months</div>
+  <div class="signal-grid" style="margin-bottom:1.5rem">
+    <div class="signal-card sig-red">
+      <div class="signal-tier tier-red">🔴 Hot Signal</div>
+      <div class="signal-name">Functional "Mood Drinks" & Adaptogen Stacking</div>
+      <div class="signal-desc">Mushroom-based wellness shots and adaptogen tonics are the fastest-growing emerging category. Gen Z is choosing lion's mane, ashwagandha and rhodiola over coffee for mental clarity. "Stress-management in a can" framing aligns directly with Gen Z's cortisol anxiety narrative already proven in summer. The move is from single-function to "functional stacking" — calm + clarity + energy in one format.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-red">+201K monthly searches: mushroom coffee</span>
+        <span class="signal-tag">lion's mane</span><span class="signal-tag">ashwagandha</span>
+        <span class="signal-tag">nootropic drinks</span><span class="signal-tag">mood beverages</span>
+      </div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-tier tier-red">🔴 Hot Signal</div>
+      <div class="signal-name">GLP-1 / Ozempic-Era Beverage Formats</div>
+      <div class="signal-desc">1 in 10 Americans now takes GLP-1 drugs (Ozempic, Wegovy). This cohort needs high-protein, high-fibre, low-sugar beverages to retain muscle mass and meet satiety needs with reduced appetite. Protein smoothies, fibre-forward drinks, and nutrient-dense formats are becoming essential infrastructure. "Beverages with purpose" is Innova's top 2026 trend — and Boost Juice's heritage positions it perfectly to own this space.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-red">1 in 10 US adults on GLP-1 drugs (rising)</span>
+        <span class="signal-tag">high protein</span><span class="signal-tag">fibre-forward</span>
+        <span class="signal-tag">nutrient dense</span><span class="signal-tag">muscle retention</span>
+      </div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-tier tier-red">🔴 Hot Signal</div>
+      <div class="signal-name">Prebiotic Soda & Gut-Brain Axis Drinks</div>
+      <div class="signal-desc">Innova names "Gut Health Hub" the top 2026 beverage trend. Prebiotic sodas (Poppi, OLIPOP) saw explosive growth with 44% of consumers noticing full-body benefits when gut health improves. The narrative has expanded from gut → mood → immunity → cognitive clarity. Multiple-benefit stacking in a single drink is the new standard. In Australia, this category is nascent — first-mover advantage remains.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-red">+110K monthly searches: prebiotic soda</span>
+        <span class="signal-tag">gut-brain axis</span><span class="signal-tag">probiotic</span>
+        <span class="signal-tag">OLIPOP / Poppi format</span><span class="signal-tag">mood + gut</span>
+      </div>
+    </div>
+    <div class="signal-card sig-red">
+      <div class="signal-tier tier-red">🔴 Hot Signal</div>
+      <div class="signal-name">"Newstalgia" Flavour Architecture</div>
+      <div class="signal-desc">Classic fruit punch, rocket pop, guava-updated tropicals — nostalgic flavour profiles rebuilt with modern wellness credentials. Brands using "newstalgia" are seeing strong campaign performance because they reassure consumers (familiar) while delivering discovery (upgraded). This trend maps directly to Boost Juice's fruit heritage and positions legacy tropical flavours for reinvention with fibre, protein, or prebiotic layering.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-red">Datassential: "newstalgia" named top 2026 flavour driver</span>
+        <span class="signal-tag">guava</span><span class="signal-tag">passionfruit</span>
+        <span class="signal-tag">tropical redux</span><span class="signal-tag">retro-modern</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:1rem;padding-left:.25rem">🟡 Warming Signals — Plan for, launching in 12 months</div>
+  <div class="signal-grid" style="margin-bottom:1.5rem">
+    <div class="signal-card sig-amber">
+      <div class="signal-tier tier-amber">🟡 Warming Signal</div>
+      <div class="signal-name">Fibre-Maxxing & Soluble Fibre Drinks</div>
+      <div class="signal-desc">What started as a niche TikTok trend — "#fibremaxxing" — is becoming a front-of-pack claim war. Fibre-forward smoothies, soluble-fibre waters, and fibre-enriched juice formats are framed as "daily defence." FoodNavigator predicts this expands in 2027 into a category-defining claim. With Boost Juice's blended format, integrating prebiotic fibre (chicory, inulin) into existing SKUs is a low-disruption, high-signal move.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-amber">#fibremaxxing trending on TikTok 2026</span>
+        <span class="signal-tag">inulin</span><span class="signal-tag">chicory root</span>
+        <span class="signal-tag">digestive defence</span><span class="signal-tag">satiety drinks</span>
+      </div>
+    </div>
+    <div class="signal-card sig-amber">
+      <div class="signal-tier tier-amber">🟡 Warming Signal</div>
+      <div class="signal-name">Swicy (Sweet + Spicy) Layered Formats</div>
+      <div class="signal-desc">The sweet-spicy "swicy" trend is maturing into "swavoury" — layered profiles with complex, savoury elements. Mango habanero, guava jalapeño, tamarind chilli are emerging in RTDs and teas. Requires precise heat calibration — warming rather than overwhelming. This unlocks a new emotional register for Boost Juice: excitement, boldness, heat. Particularly potent for summer launches targeting older Gen Z (18–24) who want adventure without alcohol.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-amber">30% of US consumers want spicy in non-alc drinks</span>
+        <span class="signal-tag">mango habanero</span><span class="signal-tag">guava jalapeño</span>
+        <span class="signal-tag">tamarind chilli</span><span class="signal-tag">heat modulation</span>
+      </div>
+    </div>
+    <div class="signal-card sig-amber">
+      <div class="signal-tier tier-amber">🟡 Warming Signal</div>
+      <div class="signal-name">Global Origin Storytelling (Yemeni Coffee, Barley Tea, Kefir)</div>
+      <div class="signal-desc">Consumer demand is shifting from broad "Asian" or "tropical" labels to pinpointed origin stories. Yemeni coffee houses (21% consumer awareness, 48% interest among aware), barley tea, hibiscus, tamarind — each with specific cultural and health provenance. Datassential identifies this as a top 2026 on-premise trend before retail adoption. For Boost Juice: authentic origin framing for existing tropical ingredients (açai, mango, dragon fruit) creates premium storytelling currency.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-amber">Datassential: global origin named top 2026 drink signal</span>
+        <span class="signal-tag">açai origin</span><span class="signal-tag">hibiscus</span>
+        <span class="signal-tag">barley tea</span><span class="signal-tag">origin provenance</span>
+      </div>
+    </div>
+    <div class="signal-card sig-amber">
+      <div class="signal-tier tier-amber">🟡 Warming Signal</div>
+      <div class="signal-name">Sleep & Recovery Functional Drinks</div>
+      <div class="signal-desc">Sleepy Girl Mocktail (tart cherry + magnesium) proved the market exists. Wearables (Oura, WHOOP) have made sleep data visible, creating consumer demand for evening recovery drinks. Melatonin, magnesium, L-theanine, chamomile in ready-to-drink formats. The occasion gap — no major brand owns "evening wind-down" in the juice/smoothie category — is wide open. CBD beverages are growing at 18.5% CAGR to $7.65B by 2033 (where regulation permits).</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-amber">CBD beverages: 18.5% CAGR to $7.65B by 2033</span>
+        <span class="signal-tag">tart cherry</span><span class="signal-tag">magnesium</span>
+        <span class="signal-tag">chamomile</span><span class="signal-tag">evening occasion</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:1rem;padding-left:.25rem">🟢 Emerging Signals — Strategic awareness, 12–18 month horizon</div>
+  <div class="signal-grid" style="margin-bottom:1.5rem">
+    <div class="signal-card sig-green">
+      <div class="signal-tier tier-green">🟢 Emerging Signal</div>
+      <div class="signal-name">Upcycled & Circular Ingredient Drinks</div>
+      <div class="signal-desc">The industry is shifting toward circular processing — "waste" from one product becomes the hero of another. Aquafaba, spent grain, fruit skin extracts. Consumers are gaining respect for resourcefulness. Gen Z sustainability signals are growing, and retailers are increasingly requiring sustainability credentials for new listings. For Boost Juice, the juice production process generates significant fruit pulp — positioning a upcycled pulp-forward drink format could be a genuine category first.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-green">Botanical sustainability signals +37.5% YoY</span>
+        <span class="signal-tag">fruit pulp upcycling</span><span class="signal-tag">circular processing</span>
+        <span class="signal-tag">aquafaba</span><span class="signal-tag">zero-waste format</span>
+      </div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-tier tier-green">🟢 Emerging Signal</div>
+      <div class="signal-name">Multisensory "Layers of Delight" Formats</div>
+      <div class="signal-desc">Innova's top 2026 global trend is "Layers of Delight" — indulgence expanding from flavour into texture, temperature, sound, and visual experience. Boba inclusions, dual-temperature drinks, carbonated-then-smooth layers. Consumers are split between comfort (familiar) and exploration (novel) — the winning format delivers both. The boba-inspired layered drink format is the clearest bridge, with TikTok's "reveal" content format perfectly suited to layered pour moments.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-green">Innova: "Layers of Delight" top 2026 global trend</span>
+        <span class="signal-tag">texture inclusions</span><span class="signal-tag">boba-inspired</span>
+        <span class="signal-tag">dual-temperature</span><span class="signal-tag">reveal format</span>
+      </div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-tier tier-green">🟢 Emerging Signal</div>
+      <div class="signal-name">AI-Personalised & "Which One" Drink Discovery</div>
+      <div class="signal-desc">As AI reshapes beverage development, the consumer-facing version is "AI curation" — drinks matched to mood, biometric data, or daily routine. Brands like Coca-Cola are using AI for NPD (Y3000 flavor). On TikTok, "which one" format polls (What should I drink for X mood?) are gaining traction. For Boost Juice: an AI recommendation layer on the ordering experience ("tell me your mood, I'll build your boost") is a near-term digital experience differentiator.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-green">Coca-Cola Y3000 AI flavor: early proof of concept</span>
+        <span class="signal-tag">mood-matched drinks</span><span class="signal-tag">AI personalisation</span>
+        <span class="signal-tag">quiz-to-cup</span><span class="signal-tag">biometric integration</span>
+      </div>
+    </div>
+    <div class="signal-card sig-green">
+      <div class="signal-tier tier-green">🟢 Emerging Signal</div>
+      <div class="signal-name">Japanese-Inspired Umami Drinks (Shochu, Shiso, Yuzu)</div>
+      <div class="signal-desc">Lychee and yuzu are just the start. The 2026 Liquid Insights Tour (London/Paris) identified Japanese-inspired drink profiles — shochu, sake, shiso, sesame, miso — adding subtle umami layers. These flavours are appearing in premium on-premise menus 12–18 months before retail adoption. For Boost Juice: yuzu already has demonstrated TikTok virality (sour, citrus, unique); shiso provides an unexpected herbaceous-sweet note for a premium spring or summer limited edition.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-green">Southern Glazer's Liquid Insights Tour 2026: Top 10</span>
+        <span class="signal-tag">yuzu</span><span class="signal-tag">shiso</span>
+        <span class="signal-tag">lychee</span><span class="signal-tag">umami-forward</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:1rem;padding-left:.25rem">🔵 Watching — Strategic awareness, 18+ month horizon</div>
+  <div class="signal-grid" style="margin-bottom:1.5rem">
+    <div class="signal-card sig-blue">
+      <div class="signal-tier tier-blue">🔵 Watching</div>
+      <div class="signal-name">THC / Cannabis-Infused Beverages</div>
+      <div class="signal-desc">+110K monthly searches for "THC drinks" in the US. Brands like Cann and Lagunitas Hi-Fi Hops are growing the cannabis beverage category as an alcohol alternative. Regulatory environment in Australia remains the primary barrier. Monitor legislative shifts closely — when regulation opens, this category will move fast and Boost Juice's distribution infrastructure would be a major competitive advantage.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-blue">RTD cocktail market $40B by 2027</span>
+        <span class="signal-tag">cannabis beverages</span><span class="signal-tag">regulatory watch</span>
+        <span class="signal-tag">NA alternatives</span>
+      </div>
+    </div>
+    <div class="signal-card sig-blue">
+      <div class="signal-tier tier-blue">🔵 Watching</div>
+      <div class="signal-name">Hydrogen Water & Cellular Hydration Claims</div>
+      <div class="signal-desc">Hydrogen water captures 74K monthly searches and is growing in wellness-adjacent communities as a "cellular hydration" and recovery claim. Currently niche and premium, with limited clinical validation in mainstream settings. If functional hydration claims gain regulatory traction in Australia, this format could migrate into Boost Juice's functional range alongside electrolyte and protein formats.</div>
+      <div class="signal-meta">
+        <span class="signal-stat ss-blue">74K monthly searches: hydrogen water</span>
+        <span class="signal-tag">cellular hydration</span><span class="signal-tag">recovery drinks</span>
+        <span class="signal-tag">electrolyte adjacent</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NPD TIMING LENS -->
+  <div class="card" style="margin-bottom:1rem">
+    <div class="card-label">NPD Development Timeline — Signal to Launch</div>
+    <div class="timeline" style="margin-top:.75rem">
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-now"></div>
+        <div class="tl-date">Now — April 2026</div>
+        <div class="tl-title">Begin development: Functional mood drinks, prebiotic soda, newstalgia tropical</div>
+        <div class="tl-desc">Hot signals have highest confidence. 9-month lead time means Spring/Summer 2027 launch readiness. Gen Z adaptogen positioning + Millennial gut-health framing both supported.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-near"></div>
+        <div class="tl-date">Q3 2026 — Begin scoping</div>
+        <div class="tl-title">Prototype: Swicy formats, sleep & recovery drinks, global origin storytelling</div>
+        <div class="tl-desc">Warming signals need consumer testing and ingredient sourcing validation. Swicy summer prototype for Autumn 2027. Sleep/recovery format for Winter 2027 launch window.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-horizon"></div>
+        <div class="tl-date">Q1 2027 — Monitor & concept develop</div>
+        <div class="tl-title">Concept: Upcycled formats, multisensory layers, yuzu/shiso Japanese profiles</div>
+        <div class="tl-desc">Emerging signals require market validation. Begin internal concept development and social listening protocols. Assign trend watch owners to each signal category.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight ins-fs">
+    <div class="ins-label">Strategic read — Future signals</div>
+    <div class="ins-text">The 9–12 month NPD window is where the most valuable white space sits. Matcha, PSL and espresso martini are all at or past peak — building for those now means arriving late. The genuinely differentiated opportunity for Boost Juice is at the intersection of its heritage (fresh fruit, functional blending) and the incoming waves: gut-brain drinks, adaptogen mood stacking, fibre-forward formats, and the "newstalgia" repositioning of tropical classics. These aren't trend chases — they're the extension of consumer behaviour trajectories already proven in adjacent categories, now heading to Boost Juice's natural home territory.</div>
+  </div>
+</div>
+
+<!-- CROSS-SEASONAL FOOTER -->
+<div style="margin-top:2rem;padding:1.5rem;background:#fff;border-radius:14px;border:.5px solid #e0ddd8">
+  <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#aaa;font-weight:500;margin-bottom:1rem">Cross-Seasonal Mega-Trends</div>
+  <div class="cross-grid">
+    <div class="cross-card"><div class="cross-title">Aesthetic-first, health-adjacent</div><div class="cross-desc">How a drink looks drives purchase across all seasons. Visual storytelling through clear cups, layering, and colour is now a baseline, not a differentiator.</div></div>
+    <div class="cross-card"><div class="cross-title">Functional wellness framing</div><div class="cross-desc">From cortisol cocktails to gut-health kombucha — consumers want drinks that "do something." Health positioning unlocks premium pricing and loyalty.</div></div>
+    <div class="cross-card"><div class="cross-title">Limited drops & FOMO culture</div><div class="cross-desc">Scarcity is a content engine. Sell-outs, restock alerts, and countdown content drive earned media. Seasonal exclusivity is a brand-building tool.</div></div>
+    <div class="cross-card"><div class="cross-title">Sober-curious & NA premium</div><div class="cross-desc">Mocktail sophistication is expected across all seasons. Gen Z and Millennials want elevated NA options that feel celebratory, not compensatory.</div></div>
+  </div>
+  <div style="margin-top:1rem;font-size:11px;color:#bbb;text-align:right">Boost Juice Cultural Immersion Pack · 2025–26 · Compiled April 2026</div>
+</div>
+
+</div>
+
+<script>
+function showSection(s){
+  ['spring','summer','autumn','winter','future'].forEach(function(x){
+    document.getElementById('sec-'+x).classList.remove('active');
+  });
+  document.getElementById('sec-'+s).classList.add('active');
+  var btns=document.querySelectorAll('.tnav-btn');
+  btns.forEach(function(b){b.className='tnav-btn'});
+  var map={spring:0,summer:1,autumn:2,winter:3,future:4};
+  var classes={spring:'tnav-sp',summer:'tnav-su',autumn:'tnav-au',winter:'tnav-wi',future:'tnav-fs'};
+  btns[map[s]].classList.add(classes[s]);
+}
+
+function switchGen(season,gen,btn){
+  var panels=document.querySelectorAll('#sec-'+season+' .gen-panel');
+  panels.forEach(function(p){p.classList.remove('active')});
+  var target=document.getElementById(season+'-'+gen);
+  if(target) target.classList.add('active');
+  var siblings=btn.parentElement.querySelectorAll('.gen-btn');
+  siblings.forEach(function(b){b.className='gen-btn'});
+  btn.classList.add(gen==='genz'?'active-genz':'active-millen');
+}
+</script>
+</body>
+</html>
